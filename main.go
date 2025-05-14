@@ -13,6 +13,7 @@ func main() {
 	flag.Parse()
 
 	http.HandleFunc("/", home)
+	http.HandleFunc("/events", events)
 	http.ListenAndServe(*addr, nil) // Use the parsed address
 }
 

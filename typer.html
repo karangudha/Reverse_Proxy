@@ -1,15 +1,16 @@
 <html lang="en">
-    <body>
-        <h2>Real-time response:</h2>
-        <p id: "resp"> </p>
 
+<body>
+    <h2>Real-time response:</h2>
+    <p id="resp"></p>
 
-        <script>
-            var sse = new EventSource('/events');
-            var resp = document.getElementById("resp");
-            sse.onmessage = function(event) {
-                resp.innerHTML += event.data + " ";
-            };
-        </script>
-    </body>
+    <script>
+        var sse = new EventSource('/events');
+        var resp = document.getElementById("resp");
+        sse.onmessage = function (event) {
+            resp.innerHTML += event.data + " ";
+        };
+    </script>
+</body>
+
 </html>
